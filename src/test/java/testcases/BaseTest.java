@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import pages.ContextMenu;
+import pages.ElectronicsPage;
 import pages.Grocerypage;
 import pages.HomePage;
 
@@ -17,6 +18,7 @@ public class BaseTest {
 	public HomePage hp;
 	public ContextMenu cm;
 	public Grocerypage GP;
+	public ElectronicsPage EP;
 	
 
 @BeforeTest
@@ -30,6 +32,7 @@ public void setUp() {
 	hp = new HomePage(driver);
 	cm = new ContextMenu(driver);
 	GP = new Grocerypage(driver);
+	EP = new ElectronicsPage(driver);
 	
 }
 

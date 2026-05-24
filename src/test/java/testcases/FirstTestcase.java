@@ -1,5 +1,6 @@
 package testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.ContextMenu;
@@ -14,7 +15,13 @@ public class FirstTestcase extends BaseTest{
 		
 		
 		Thread.sleep(1000);
-		cm.clickGrocery();
+		//cm.clickGrocery();
+		cm.clickElectronics();
+		String Welcomemsg = EP.getElectonicsWelcomeMessage();
+		//System.out.println(Welcomemsg);
+		Assert.assertEquals(Welcomemsg,"Electronics");
+		System.out.println(Welcomemsg);
+		
 		
 		
 		
