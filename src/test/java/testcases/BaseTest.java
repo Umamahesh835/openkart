@@ -7,9 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import pages.ContextMenu;
+import pages.Grocerypage;
+import pages.HomePage;
+
 public class BaseTest {
 
 	WebDriver driver;
+	public HomePage hp;
+	public ContextMenu cm;
+	public Grocerypage GP;
 	
 
 @BeforeTest
@@ -19,6 +26,10 @@ public void setUp() {
 	driver.get("https://openkart.co.in/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+	
+	hp = new HomePage(driver);
+	cm = new ContextMenu(driver);
+	GP = new Grocerypage(driver);
 	
 }
 
