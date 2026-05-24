@@ -15,7 +15,7 @@ public class ContextMenu extends basePage{
 	//(//*[@loading ='lazy'])[1]
 	////*[@alt='Grocery']
 	@FindBy(xpath = "(//*[@loading ='lazy'])[1]") public WebElement Grocery;
-	@FindBy(xpath = "//*[@alt='Electronics']") public WebElement Electronics;
+	@FindBy(xpath = "//div[2]/div/div[2]/img") public WebElement Electronics;
 	
 	public void clickGrocery() {
 		Grocery.click();
